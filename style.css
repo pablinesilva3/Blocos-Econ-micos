@@ -1,0 +1,198 @@
+/* BASE */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #ecfdf5;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(-45deg, #16a34a, #22c55e, #14532d);
+    background-size: 400% 400%;
+    animation: gradient 6s ease infinite;
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ANIMAÇÃO GRADIENTE */
+@keyframes gradient {
+    0% {background-position: 0%}
+    50% {background-position: 100%}
+    100% {background-position: 0%}
+}
+
+/* MENU */
+nav {
+    background: #14532d;
+    text-align: center;
+    padding: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* LINHA ANIMADA */
+nav a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #bbf7d0;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #bbf7d0;
+}
+
+/* CONTEÚDO */
+.container {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    border-left: 6px solid #16a34a;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* SEÇÕES */
+section {
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* ANIMAÇÃO AO ROLAR */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.8s;
+}
+
+/* TÍTULOS */
+h2 {
+    color: #166534;
+    margin-bottom: 15px;
+    border-left: 4px solid #22c55e;
+    padding-left: 10px;
+}
+
+/* TEXTO */
+p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* BOTÃO */
+.btn {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 25px;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: pulse 1.5s infinite;
+}
+
+.btn:hover {
+    background: #22c55e;
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.08);}
+    100% {transform: scale(1);}
+}
+
+/* FOOTER */
+footer {
+    background: #14532d;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+}  
+
+
+/* HEADER COMPLETO */
+header {
+    background: 
+        linear-gradient(rgba(0, 80, 0, 0.6), rgba(0, 80, 0, 0.6)),
+        url("https://images.unsplash.com/photo-1554224155-6726b3ff858f");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+
+    animation: fadeDown 1s ease;
+}
+
+/* ANIMAÇÃO DE ENTRADA */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MELHORA DO TEXTO */
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+    opacity: 0.9;
+}

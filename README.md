@@ -1,1 +1,0 @@
-# Blocos-Econ-micos
